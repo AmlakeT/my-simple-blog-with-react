@@ -8,7 +8,8 @@ const Create = () => {
     const history = useHistory()
 
     const handleSubmit = (e) =>{
-        e.preventDefualt();
+        e.preventDefault()      
+       
         const blog = {title, body, author};
         
     fetch('http://localhost:8000/blogs/', {
@@ -34,7 +35,7 @@ const Create = () => {
   return (
     <>
       <h1 className=" flex justify-center text-lg font-serif ">Write What Your Feeling</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col  px-10">
+      <form onSubmit={ handleSubmit} className="flex flex-col  px-10">
         <label className="font-serif text-lg py-2 ">Blog Title:</label>
         <input
         className=" border py-2 mb-10"
@@ -59,17 +60,13 @@ const Create = () => {
 
          </select>
 
-        <button type="submit" className="rounded-md mx-auto block  px-3 py-1   border hover:bg-zinc-100  hover:text-black   font-serif text-xl ">Add Blog</button>
+        <button type="submit"
+         className="rounded-md mx-auto block  px-3 py-1   border hover:bg-zinc-100 
+          hover:text-black   font-serif text-xl ">Add Blog</button>
     
       </form>
 
-        <pre>
-          this is a formated text
-          <p>this is the main paragraph</p>
-          <br />
-          <p>this paragaph one</p>
-          <hr />
-        </pre>
+        
 
       </>
   );

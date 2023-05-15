@@ -11,7 +11,7 @@ const BlogList = ({ bloges }) => {
                     <h1 className=" text-xl text-amber-600  font-serif pb-2">{blog.title}</h1>
                     <p>Written By {blog.author}</p>
                     </Link>
-                  
+                   
                     
                 </div>
             ))}     
